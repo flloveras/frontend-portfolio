@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreProye" style="color: white;">Nombre del proyecto</label>
+                    <input type="text" class="form-control" id="nombreProye" name="nombreProye" [(ngModel)]="nombreProye" required>>
+                </div>
+                <div class="form-group">
+                    <label for="urlProye" style="color: white;">Url del proyecto</label>
+                    <input type="text" class="form-control" id="urlProye" name="urlProye" [(ngModel)]="urlProye" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionProye" style="color: white;">Descripcion del proyecto</label>
+                    <input type="text" class="form-control" id="descripcionProye" name="descripcionProye"[(ngModel)]="descripcionProye">
+                </div>
+                <div class="form-group">
+                    <label for="anioProye" style="color: white;">Año del proyecto</label>
+                    <input type="text" class="form-control" id="anioProye" name="anioProye" [(ngModel)]="anioProye">
+                </div>
+                <button class="btn btn-primary">
+                    Crear
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

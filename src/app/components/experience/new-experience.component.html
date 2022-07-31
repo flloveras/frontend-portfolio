@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="puestoExp" style="color: white;">Puesto laboral</label>
+                    <input type="text" class="form-control" id="puestoExp" name="puestoExp" [(ngModel)]="puestoExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionExp" style="color: white;">Descripcion de la tarea</label>
+                    <input type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="descripcionExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresaExp" style="color: white;">Nombre de la empresa</label>
+                    <input type="text" class="form-control" id="empresaExp" name="empresaExp" [(ngModel)]="empresaExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="aniodesdeExp" style="color: white;">Año de comienzo</label>
+                    <input type="text" class="form-control" id="aniodesdeExp" name="aniodesdeExp" [(ngModel)]="aniodesdeExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="aniohastaExp" style="color: white;">Año de finalización</label>
+                    <input type="text" class="form-control" id="aniohastaExp" name="aniohastaExp" [(ngModel)]="aniohastaExp" required>
+                </div>
+                <button class="btn btn-primary">
+                    Crear
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

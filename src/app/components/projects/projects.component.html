@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <div class="container-fluid px-3 py-2">
+      <button class="btn btn-edit" type="edit" style="float: right;" routerLink="/nuevoproye" *ngIf="isLogged">Crear</button>
+          <h1 class="display-5 fw-bold lh-1 mb-3">Proyectos</h1>
+          <div class="container-fluid px-3 py-2" *ngFor="let Proyecto of proye">
+          <button class="btn btn-edit" type="edit" style="float: right;" *ngIf="isLogged" (click)="delete(Proyecto.idProye)"><i
+            class="fa fa-trash"></i></button>
+          <button class="btn btn-edit" type="edit" style="float: right;" *ngIf="isLogged" routerLink="/editproye/{{Proyecto.idProye}}"><i
+            class="fa fa-pencil"></i></button>
+          <h3>{{Proyecto.nombreProye}}</h3>
+          <h3>{{Proyecto.urlProye}}</h3>
+              <h5 class="small">{{Proyecto.anioProye}}</h5>
+              <p>{{Proyecto.descripcionProye}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+

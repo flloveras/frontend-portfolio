@@ -1,0 +1,20 @@
+
+body {
+  font-size: 20px;
+  align-items: center;
+}
+.container {
+  align-items: center;
+  text-align: center;
+  position: relative;
+  
+}
+
+.form-title {
+  size: 15px;
+  color: black;
+}
+
+.boton {
+  border-style: 1px solid black;
+}

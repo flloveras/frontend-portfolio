@@ -1,0 +1,19 @@
+<div class="container" *ngIf="hab">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreHab" style="color: white;">Habilidad</label>
+                    <input type="text" class="form-control" id="nombreHab" name="nombreHab" [(ngModel)]="hab.nombreHab" required>
+                </div>
+                <div class="form-group">
+                    <label for="nivelHab" style="color: white;">Nivel de habilidad</label>
+                    <input type="text" class="form-control" id="nivelHab" name="nivelHab" [(ngModel)]="hab.nivelHab" required>
+                </div>
+                <button class="btn btn-primary">
+                    Crear
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

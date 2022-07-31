@@ -1,0 +1,33 @@
+    <body>
+	<div class="container">
+			<div class="row">
+				<span class="form-title">
+					Iniciar sesión
+				</span>
+				<form class="form" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+					<div class="validate-input">
+						<input class="input" type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Usuario" 
+						[(ngModel)]="nombreUsuario" required />
+						
+						<span class="focus" data-placeholder="&#xe82a;"></span>
+					</div>
+
+					<div class="validate-input">
+						<input class="input" type="password" id="password" name="password" 
+						placeholder="Password" [(ngModel)]="password" required/>
+						
+						<span class="focus" data-placeholder="&#xe80f;"></span>
+					</div>
+
+					<div class="boton">
+						<button type="submit" class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+</body>

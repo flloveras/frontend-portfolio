@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="container-fluid px-3 py-2">
+      <button class="btn btn-edit" type="edit" style="float: right;" routerLink="/nuevahab" *ngIf="isLogged">Crear</button>
+      <div class="container-fluid px-3 py-2">
+        <div class="container-fluid px-3 py-2">
+
+          <h1 class="display-5 fw-bold lh-1 mb-3">Habilidades e idiomas</h1>
+          
+
+        
+        <div class="container-fluid px-3 py-2" *ngFor="let Habilidad of hab">
+
+          
+          <h3>{{Habilidad.nombreHab}}</h3>
+          <button class="btn btn-edit" style="float: right;" type="button" routerLink="/edithab/{{Habilidad.idHab}}" *ngIf="isLogged"><i
+              class="fa fa-pencil"></i></button>
+          <button class="btn btn-edit" style="float: right;" type="button" (click)="delete(Habilidad.idHab)" *ngIf="isLogged"><i
+              class="fa fa-trash"></i></button>
+              <sj-progress-bar 
+            [value]="Habilidad.nivelHab" 
+            [stripes]="false" 
+            color="#2471A3" 
+            [showPercentage]="true"
+            percentagePosition="left"
+></sj-progress-bar>
+              <br>
+        </div>
+      </div>
+    </div>
+  </div>
+

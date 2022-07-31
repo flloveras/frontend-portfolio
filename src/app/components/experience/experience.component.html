@@ -1,0 +1,31 @@
+<div class="container px-3 py-2">
+  <div class="card">
+    <div class="container-fluid px-3 py-2">
+      
+      <button class="btn btn-edit" type="edit" style="float: right;" routerLink="/nuevaexp" *ngIf="isLogged">Crear</button>
+          <h1 class="display-5 fw-bold lh-1 mb-3">Experiencia laboral</h1>
+          
+          <div class="container-fluid px-3 py-2" *ngFor="let Experiencia of expe">
+            <button class="btn btn-edit" type="edit" style="float: right;" *ngIf="isLogged" (click)="delete(Experiencia.idExp)"><i
+              class="fa fa-trash"></i></button>
+            <button class="btn btn-edit" type="edit" style="float: right;" *ngIf="isLogged" routerLink="/editexp/{{Experiencia.idExp}}" ><i
+              class="fa fa-pencil"></i></button>
+          
+         
+            
+              <h3>{{Experiencia.puestoExp}}</h3>
+              <p>{{Experiencia.descripcionExp}}</p>
+              <h3>{{Experiencia.empresaExp}}</h3>
+              <h5 class="small">{{Experiencia.aniodesdeExp}} - {{Experiencia.aniohastaExp}}</h5>
+              
+            
+          </div>
+          
+          
+
+        </div>
+        </div>
+      </div>
+    
+ 
+

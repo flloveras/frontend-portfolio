@@ -1,0 +1,39 @@
+<div class="container">
+<header>
+  <div class="px-3 py-2 text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+        <div class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <img class="bi me-2" width="140" role="img" src="assets/logo-arg-prog.png">
+          <div>Argentina Programa #YoProgramo</div>
+        </div>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li class="bi d-block mx-auto mb-1">
+            <a class="nav-link text-white fa-icon fa-icon-2x " href="https://www.linkedin.com/in/facundo-lloveras-43844039/" title="">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="bi d-block mx-auto mb-1">
+            <a class=" nav-link text-white fa-icon fa-icon-2x" href="https://github.com/flloveras" title="">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link text-white">
+          
+              <button class="btn btn-primary" type="button" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button class="nbtn btn-primary" type="button" (click)="onLogOut()" *ngIf="isLogged">Salir</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+</header>
+</div>
+<div class="container">
+  <img src="assets/banner.jpg" width=100% class="img-fluid">
+</div>

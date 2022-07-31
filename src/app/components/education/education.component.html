@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card">
+    
+      <div class="container-fluid px-3 py-2">
+        
+            <button class="btn btn-edit" type="edit" style="float: right;" routerLink="/nuevaedu" *ngIf="isLogged">Crear</button>
+          
+            <h1 class="display-5 fw-bold lh-1 mb-3">Educación</h1>
+            
+            <div class="container-fluid px-3 py-2" *ngFor="let educacion of edu">
+              <button class="btn btn-edit" type="edit" style="float: right;"*ngIf="isLogged" (click)="delete(educacion.idEdu)"><i
+                class="fa fa-trash"></i></button>
+            <button class="btn btn-edit" type="edit" style="float: right;" *ngIf="isLogged" routerLink="/editedu/{{educacion.idEdu}}"><i
+              class="fa fa-pencil"></i></button>
+              <div class="col d-flex align-items-start">
+                <div class="col-md-2 imagenes">
+                  <img class="rounded-circle img-fluid" src="{{educacion.urlfotoEdu}}" width="130px">
+                </div>
+                <div>
+                  <h3>{{educacion.institutoEdu}}</h3>
+                  <h5 class="small">{{educacion.aniodesdeEdu}} - {{educacion.aniohastaEdu}}</h5>
+                  <p>{{educacion.tituloEdu}}</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+   
+

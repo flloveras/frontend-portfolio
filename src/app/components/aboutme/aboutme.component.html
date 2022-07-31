@@ -1,0 +1,17 @@
+<div class="container">
+<div class="card">
+<div class="container-fluid px-3 py-2">
+  <button class="btn btn-edit" type="edit" style="float: right;"  *ngIf="isLogged" routerLink="/editperso/1"><i
+    class="fa fa-pencil"></i></button>
+    <h1 class="display-5 fw-bold lh-1 mb-3">Hola, soy {{perso.nombre}} {{perso.apellido}}</h1>
+    <div class="col-md-2 imagenes">
+      <img src="{{perso.urlfoto}}" class="rounded-circle img-fluid" width="330px">
+    </div>
+    <div class="container-fluid px-3 py-2">
+      
+      <h3>{{perso.titulo}}</h3>
+      <p>{{perso.info}}</p>
+    </div>
+  </div>
+</div>
+</div>
